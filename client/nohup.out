@@ -1,0 +1,13 @@
+
+> material-tailwind-dashboard-react@2.0.1 dev
+> vite
+
+
+  VITE v3.1.0  ready in 309 ms
+
+  ➜  Local:   http://localhost:4000/
+  ➜  Network: http://185.199.52.40:4000/
+files in the public directory are served at the root path.
+Instead of /public/css/tailwind.css, use /css/tailwind.css.
+files in the public directory are served at the root path.
+Instead of /public/css/tailwind.css, use /css/tailwind.css.

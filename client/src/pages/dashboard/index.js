@@ -1,0 +1,15 @@
+export * from "@/pages/dashboard/home";
+export * from "@/pages/dashboard/ticket";
+export * from "@/pages/dashboard/reports";
+export * from "@/pages/dashboard/notifications";
+// export * from "@/pages/dashboard/setup";
+export * from "@/pages/dashboard/setup/branch";
+export * from "@/pages/dashboard/setup/category";
+export * from "@/pages/dashboard/setup/user";
+export * from "@/pages/dashboard/setup/automation";
+export * from "@/pages/dashboard/help";
+export * from "@/pages/dashboard/myprofile";
+export * from "@/pages/dashboard/setup/accounting";
+export * from "@/pages/dashboard/setup/cas";
+export * from "@/pages/dashboard/setup/areamanager";
+export * from "@/pages/dashboard/setup/supplier";

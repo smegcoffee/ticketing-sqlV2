@@ -1,0 +1,429 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input-error {
+    border-bottom: 1px solid red; /* or any other error border color */
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+  }
+
+  .activeMenuItem {
+    background-color: #349aef;
+    color: white;
+  }
+
+  .reports-custom-datepicker{
+    border: 1px solid #b3b3b3;
+    border-radius: 6px;
+    /* position: absolute; */
+    /* margin-top: -10px; */
+    max-width: 18%;
+  }
+
+  @keyframes ticker {
+    0%   {margin-top: 0}
+    20%  {margin-top: -30px}
+    40%  {margin-top: -60px}
+    60%  {margin-top: -90px}
+    80%  {margin-top: -120px}
+    100% {margin-top: 0}
+  }
+  .news {
+    /* width: 350px; */
+    height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 5px;
+    -webkit-user-select: none;
+    /* position: absolute; */
+    /* margin-left: -80%; */
+    margin-top: -3%;
+  } 
+
+  .news ul {
+    /* float: left; */
+    /* padding-left: 20px; */
+    animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    -webkit-user-select: none
+  }
+  
+  .news ul li {line-height: 30px; list-style: none }
+  
+  .news ul li a {
+    color: #ec0000;
+    text-decoration: none;
+    font: 20px Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none
+  }
+  @media screen and (min-width: 1321px) and (max-width: 1570px) {
+    .news ul li a {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 1320px) {
+    .news ul li a {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 1185px) {
+    .news ul li {
+      font-size: 12px;
+      width:250px !important;
+      font-weight: bold;
+      padding-right: 60px;
+    }
+  }
+  
+  .news ul:hover { animation-play-state: paused }
+  .news span:hover+ul { animation-play-state: paused }
+  
+
+  @-webkit-keyframes moving-gradient {
+    0% { background-position: -250px 0; }
+    100% { background-position: 250px 0; }
+}
+
+tr.loading {
+  background-image: linear-gradient(to right, transparent 50%, #e6e6e6 50%);
+  background-size: 200% 100%;
+  animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+tr.loading td {
+  opacity: .45;
+  pointer-events: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: -30%;
+  }
+  80% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+.tabl_loading {
+  font-family: sans-serif;
+  border-collapse: collapse;
+}
+
+.tabl_loading td,
+.tabl_loading th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.badgeIndex{
+  z-index: 999!important;
+  overflow: visible!important;
+}
+.bellss{
+  overflow: visible!important;
+}
+.checkCustom:hover{
+  height: 45px;
+  width: 45px;
+  margin-left: -3px;
+  margin-top: -26px;
+  color: green;
+}
+
+
+/* Define the wiggle animation */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Apply the animation to the element */
+.wiggle-on-hover:hover {
+  animation: wiggle 0.5s ease infinite;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: -5px;
+}
+
+.addbghover:hover{
+  background: rgb(235, 235, 235);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #10171ccc;
+  padding: 20px;
+}
+
+.loading-image {
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 30px; /* Adjust height to accommodate text */
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.loading-bar::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 128, 255);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loadingS 2s linear;
+}
+
+.progress-text {
+  color: white; /* Customize the color as needed */
+  font-size: 18px; /* Customize the font size as needed */
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 1; /* Ensure the text appears above the progress bar */
+}
+
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 128, 255);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loadingS 2s linear;
+}
+
+@keyframes loadingS {
+  0% { width: 0%; }
+  50% { width: 50%; }
+  100% { width: 100%; }
+}
+.image-link {
+  display: block;
+  position: relative;
+}
+
+.image-thumbnail:hover {
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.image-link::after {
+  content: '\A';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-link:hover::after {
+  opacity: 1;
+}
+
+.image-link:hover .image-thumbnail {
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.file-icon {
+  display: inline-block;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  line-height: 50px; /* Adjust as needed */
+  text-align: center;
+  background-color: #f0f0f0; /* Background color for the icon container */
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.file-icon i {
+  font-size: 100px; /* Adjust as needed */
+}
+
+.file-icon:hover {
+  background-color: #e0e0e0; /* Hover background color */
+}
+
+.filename {
+  max-width: 100px; /* Same as the max-width of the image */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.remove-icon i {
+  color: white;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-thumbnail {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 780px) {
+  .hideColorIndicator{
+  display: none;
+  visibility: hidden;
+  }
+}
+
+/* .label-support {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* Table Sorting */
+
+.sr-only {
+  position: absolute;
+  top: -30em;
+}
+
+table.sortable td,
+table.sortable th {
+  padding: 0.125em 0.25em;
+  width: 8em;
+}
+
+table.sortable th {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+  position: relative;
+}
+
+table.sortable th.no-sort {
+  padding-top: 0.35em;
+}
+
+table.sortable th:nth-child(5) {
+  width: 10em;
+}
+
+table.sortable th button {
+  padding: 4px;
+  margin: 1px;
+  font-size: 100%;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  display: inline;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+}
+
+table.sortable th button span {
+  position: absolute;
+  right: 4px;
+}
+
+table.sortable th[aria-sort="descending"] span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.sortable th[aria-sort="ascending"] span::after {
+  content: "▲";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.show-unsorted-icon th:not([aria-sort]) button span::after {
+  content: "♢";
+  color: currentcolor;
+  font-size: 100%;
+  position: relative;
+  top: -3px;
+  left: -4px;
+}
+
+table.sortable td.num {
+  text-align: right;
+}
+
+table.sortable tbody tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+/* Focus and hover styling */
+
+table.sortable th button:focus,
+table.sortable th button:hover {
+  padding: 2px;
+  border: 2px solid currentcolor;
+  background-color: #e5f4ff;
+}
+
+table.sortable th button:focus span,
+table.sortable th button:hover span {
+  right: 2px;
+}
+
+table.sortable th:not([aria-sort]) button:focus span::after,
+table.sortable th:not([aria-sort]) button:hover span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
